@@ -48,7 +48,7 @@ This way the snake learns that staying alive is more important than getting clos
 After training, the steps and the score are averaged over 1000 test games. 
 The results for an increasing number of training games is shown in the graph below. 
 <p align="center">
-	<img src="img/nn_graph.png" width="750">
+	<img src="img/nn_graph.png" width="500">
 </p>
 A move is picked every step from all three possible moves (LEFT, FORWARD, RIGHT). 
 The input for the trained neural network is the same as in training with the difference that three inputs are given. 
@@ -68,10 +68,12 @@ For visualisation of the NN agents performance for different numbers of initial 
 
 ## Results
 The averaged results from 1000 test games for both agents can be seen in the table below. The best NN agent was trained on 100.000 training games.
+
 |         | Search         | Best NN       |
 | :---:   |    :---:       |    :---:      |
 | steps   | 480.93         | 595.10        |
 | score   | 31.88          | 36.46         |
+
 As mentioned before, the search agent only ever picks a valid move even if the snake cannot get closer to the food with this step. 
 The NN agent does not underly this rule prior to training. It learns not to run into itself or hit the edges of the grid only over many iterations. 
 After being trained on 10.000 games or more, the NN agent only chooses a direction that is not blocked even if the snake cannot get closer to 
